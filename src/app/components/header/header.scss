@@ -1,0 +1,255 @@
+// src/app/components/header/header.component.scss
+// Importar tu fuente exacta
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+// Variables de colores ATHENA BRAND (exactas a tu diseño)
+:root {
+  --athena-primary: #F5F2EF;
+  --athena-secondary: #CEBCA6;
+  --athena-accent: #F4EBE0;
+  --athena-dark: #161411;
+}
+
+// Estilos exactos de tu navbar
+.myTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--athena-secondary);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--athena-accent);
+  }
+}
+
+.navbar_font {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: var(--athena-primary);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--athena-secondary);
+  transition: all 0.3s ease;
+  position: relative;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--athena-accent);
+    transform: translateY(-1px);
+  }
+
+  &:focus {
+    color: var(--athena-secondary);
+  }
+}
+
+// Botón hamburguesa
+.navbar-toggler {
+  border: none;
+  box-shadow: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{%23CEBCA6}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+}
+
+.custom-nav-wrap {
+  flex-wrap: nowrap;
+}
+
+// Estilos del botón de búsqueda (exactos a tu diseño)
+.btnBuscar {
+  background-color: var(--athena-accent);
+  color: var(--athena-secondary);
+  border-color: var(--athena-secondary);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: var(--athena-secondary);
+    color: var(--athena-accent);
+    border-color: var(--athena-secondary);
+    transform: translateY(-1px);
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(206, 188, 166, 0.25);
+  }
+}
+
+// Input de búsqueda
+.inputBuscar {
+  border-color: var(--athena-secondary);
+  transition: all 0.3s ease;
+
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(206, 188, 166, 0.25);
+    border-color: var(--athena-secondary);
+  }
+
+  &::placeholder {
+    color: rgba(206, 188, 166, 0.7);
+  }
+}
+
+// Íconos
+.icons {
+  color: var(--athena-secondary);
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--athena-accent);
+    transform: scale(1.1);
+  }
+}
+
+// Badge del carrito
+.badge {
+  font-size: 0.6rem;
+  min-width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Dropdown de usuario
+.dropdown-menu {
+  border-color: var(--athena-secondary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  .dropdown-item {
+    color: var(--athena-dark);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--athena-accent);
+      color: var(--athena-secondary);
+    }
+  }
+
+  .dropdown-divider {
+    border-color: rgba(206, 188, 166, 0.3);
+  }
+}
+
+// Responsivo - Media queries exactas a tu diseño
+@media (max-width: 280px) {
+  .custom-nav-wrap {
+    gap: 0.5rem;
+  }
+
+  .custom-nav-wrap .navbar-toggler {
+    align-self: flex-end;
+  }
+
+  .myTitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .nav-link {
+    color: var(--athena-secondary);
+    padding: 0.5rem 0;
+  }
+
+  // Ajustes para mobile
+  .navbar-collapse {
+    margin-top: 1rem;
+  }
+
+  // Formulario de búsqueda en mobile
+  .d-flex.gap-2 {
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  // Espaciado en desktop
+  .gap-lg-4 {
+    gap: 1.5rem !important;
+  }
+}
+
+// Animaciones adicionales para mejorar UX
+.navbar-nav .nav-item {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--athena-accent);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+// Efecto de carga suave
+.navbar {
+  opacity: 0;
+  animation: fadeInDown 0.5s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Indicador de búsqueda activa
+.search-active {
+  .inputBuscar {
+    border-color: var(--athena-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(206, 188, 166, 0.25);
+  }
+}
+
+// Estados de hover mejorados
+.position-relative {
+  &:hover .badge {
+    animation: bounce 0.6s;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-3px);
+  }
+  80% {
+    transform: translateY(-1px);
+  }
+}

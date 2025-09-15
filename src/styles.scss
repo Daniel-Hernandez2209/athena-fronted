@@ -1,1 +1,106 @@
-/* You can add global styles to this file, and also import other style files */
+
+// ATHENA BRAND - Estilos Globales
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
+
+// Variables de ATHENA BRAND
+:root {
+  --athena-primary: #F5F2EF;
+  --athena-secondary: #CEBCA6;
+  --athena-accent: #F4EBE0;
+  --athena-dark: #161411;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--athena-primary);
+  color: var(--athena-dark);
+  line-height: 1.6;
+}
+
+// Clases utilitarias de ATHENA
+.text-athena-primary { color: var(--athena-primary) !important; }
+.text-athena-secondary { color: var(--athena-secondary) !important; }
+.text-athena-accent { color: var(--athena-accent) !important; }
+.text-athena-dark { color: var(--athena-dark) !important; }
+
+.bg-athena-primary { background-color: var(--athena-primary) !important; }
+.bg-athena-secondary { background-color: var(--athena-secondary) !important; }
+.bg-athena-accent { background-color: var(--athena-accent) !important; }
+.bg-athena-dark { background-color: var(--athena-dark) !important; }
+
+// Botones de ATHENA
+.btn-athena {
+  background-color: var(--athena-accent);
+  color: var(--athena-secondary);
+  border: 1px solid var(--athena-secondary);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--athena-secondary);
+    color: var(--athena-accent);
+    transform: translateY(-2px);
+  }
+}
+
+.btn-athena-outline {
+  background-color: transparent;
+  color: var(--athena-secondary);
+  border: 2px solid var(--athena-secondary);
+
+  &:hover {
+    background-color: var(--athena-secondary);
+    color: var(--athena-primary);
+  }
+}
+
+// Loading spinner personalizado
+.athena-spinner {
+  border: 4px solid var(--athena-accent);
+  border-top: 4px solid var(--athena-secondary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Responsive utilities
+.container-athena {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Scrollbar personalizado
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--athena-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--athena-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--athena-accent);
+}
+

@@ -1,59 +1,69 @@
-# Fronted
+# 🏛️ ATHENA BRAND E-commerce
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.5.
+Tienda online de moda urbana y deportiva ubicada en San Pedro, Antioquia, Colombia.
 
-## Development server
+## 🚀 Tecnologías
 
-To start a local development server, run:
+- **Frontend**: Angular 17+ con Bootstrap 5
+- **Backend**: Node.js + Express + MongoDB
+- **Pagos**: PSE integrado
+- **Styling**: SCSS con diseño personalizado
 
+## 📋 Requisitos Previos
+
+- Node.js 16+
+- MongoDB 5+
+- Angular CLI
+
+## 🛠️ Instalación
+
+### Backend
 ```bash
+cd backend
+npm install
+cp .env.example .env
+npm run dev
+```
+
+### Frontend
+```bash
+cd frontend
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🏪 Características
 
-## Code scaffolding
+- ✅ Catálogo de productos dinámico
+- ✅ Carrito de compras
+- ✅ Autenticación de usuarios
+- ✅ Panel de administración
+- ✅ Integración PSE para pagos
+- ✅ Responsive design
+- ✅ Búsqueda avanzada
+- ✅ Gestión de inventario
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📱 Categorías
 
-```bash
-ng generate component component-name
-```
+- HOMBRE
+- MUJER  
+- DEPORTIVOS
+- HODDIES Y SACOS
+- CHAQUETAS
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🎨 Paleta de Colores
 
-```bash
-ng generate --help
-```
+- Primary: #F5F2EF
+- Secondary: #CEBCA6  
+- Accent: #F4EBE0
+- Dark: #161411
 
-## Building
+## 📞 Contacto
 
-To build the project run:
+- **Ubicación**: San Pedro, Antioquia, Colombia
+- **Email**: contacto@athenabrand.co
+- **Teléfono**: +57 300 123 4567
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+*ATHENA BRAND - MENOS RUIDO MAS ESENCIA*
+*COLOMBIAN STORE SINCE 2025*
